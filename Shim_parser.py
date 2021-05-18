@@ -39,7 +39,7 @@ def shimparser_inet():
         os.system('cls' if os.name == 'nt' else 'clear') 
 
 def shimparser_local():
-        with open('log.txt') as input_file, open('shims.c', 'w') as output_file:
+        with open('log.txt', encoding ='ISO-8859-1') as input_file, open('shims.c', 'w') as output_file:
             text = input_file.read()
             pat = r"""cannot\s*locate\s*symbol\s*"(.+?)"\s*referenced\s*"""
             for symbol in re.findall(pat, text):
